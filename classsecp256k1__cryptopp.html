@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('classsecp256k1__cryptopp.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="secp256k1__cryptopp_8h_source.html">secp256k1_cryptopp.h</a>&gt;</code></p>
+<p><code>#include &lt;secp256k1_cryptopp.h&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for secp256k1_cryptopp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -194,8 +194,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="classdigital__signature.html#acf50cd1489f12fcea52c387cd8755eee">digital_signature</a>.</p>
 
 <p class="reference">References <a class="el" href="classsecp256k1__cryptopp.html#a694800b6c1796c4d3c15b22b8bb41452">private_key_size()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                                              {</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="comment">// Create private key object from exponent</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">const</span> CryptoPP::Integer privateExponent(private_key, <a class="code" href="classsecp256k1__cryptopp.html#a694800b6c1796c4d3c15b22b8bb41452">private_key_size</a>());</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  CryptoPP::ECDSA&lt;CryptoPP::ECP, CryptoPP::SHA256&gt;::PrivateKey privateKey;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  privateKey.Initialize(CryptoPP::ASN1::secp256k1(), privateExponent);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="comment">// Create the public key object</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  CryptoPP::ECDSA&lt;CryptoPP::ECP, CryptoPP::SHA256&gt;::PublicKey publicKey;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  privateKey.MakePublicKey(publicKey);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">// Save the public key in public_key</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  publicKey.GetGroupParameters().GetCurve().EncodePoint(public_key,</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      publicKey.GetPublicElement(), <span class="keyword">true</span>);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div><div class="ttc" id="classsecp256k1__cryptopp_html_a694800b6c1796c4d3c15b22b8bb41452"><div class="ttname"><a href="classsecp256k1__cryptopp.html#a694800b6c1796c4d3c15b22b8bb41452">secp256k1_cryptopp::private_key_size</a></div><div class="ttdeci">size_t private_key_size()</div><div class="ttdef"><b>Definition:</b> secp256k1_cryptopp.cc:27</div></div>
-</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
@@ -232,7 +231,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classdigital__signature.html#a9e608fb7ac353a4c0a15c307ace7bc04">digital_signature</a>.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                                      {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9917cba96a1320416667115233e82a1f"></a>
@@ -259,7 +258,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classdigital__signature.html#a05407952582a3ae2b5cf8331de22b6a2">digital_signature</a>.</p>
-<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                  {</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="a694800b6c1796c4d3c15b22b8bb41452"></a>
@@ -288,7 +287,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="classdigital__signature.html#a4cf45e916738753be5c462329d69fd07">digital_signature</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classsecp256k1__cryptopp.html#ad1159f2f3e20436d34c6b21c2d4f79a3">gen_public_key()</a>, and <a class="el" href="classsecp256k1__cryptopp.html#a030d62f0c7d51900ba5042d62762454c">sign()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                            {</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">return</span> 32;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div></div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
@@ -328,7 +327,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="classdigital__signature.html#aa6d33e206e40273f74f42717e527ea04">digital_signature</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classsecp256k1__cryptopp.html#a1f6c0fa3fe5c9c894ebd65d113cbf59f">verify()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                           {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">return</span> 33;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div></div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
@@ -365,10 +364,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="reference">References <a class="el" href="classdigital__signature.html#a3202cd2c59a29cbc4cb2fc1ad4a21eb5">digital_signature::register_factory()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                                       {</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="classdigital__signature.html#a3202cd2c59a29cbc4cb2fc1ad4a21eb5">secp256k1_cryptopp::register_factory</a>(<span class="stringliteral">&quot;secp256k1&quot;</span>, [] {</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classdigital__signature.html">digital_signature</a>*<span class="keyword">&gt;</span>(<span class="keyword">new</span> <a class="code" href="classsecp256k1__cryptopp.html">secp256k1_cryptopp</a>());</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  });</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div><div class="ttc" id="classdigital__signature_html_a3202cd2c59a29cbc4cb2fc1ad4a21eb5"><div class="ttname"><a href="classdigital__signature.html#a3202cd2c59a29cbc4cb2fc1ad4a21eb5">digital_signature::register_factory</a></div><div class="ttdeci">static void register_factory(std::string name, digital_signature_factory_function func)</div><div class="ttdef"><b>Definition:</b> digital_signature.cc:15</div></div>
-<div class="ttc" id="classsecp256k1__cryptopp_html"><div class="ttname"><a href="classsecp256k1__cryptopp.html">secp256k1_cryptopp</a></div><div class="ttdef"><b>Definition:</b> secp256k1_cryptopp.h:7</div></div>
-<div class="ttc" id="classdigital__signature_html"><div class="ttname"><a href="classdigital__signature.html">digital_signature</a></div><div class="ttdef"><b>Definition:</b> digital_signature.h:7</div></div>
-</div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
@@ -430,9 +426,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="classdigital__signature.html#a1964b7b338f185dac9a57eccd5042d16">digital_signature</a>.</p>
 
 <p class="reference">References <a class="el" href="classsecp256k1__cryptopp.html#a694800b6c1796c4d3c15b22b8bb41452">private_key_size()</a>, and <a class="el" href="classsecp256k1__cryptopp.html#ad35babfdeeb8c5b5a7626d0f91ca7151">signature_size()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                                   {</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  CryptoPP::AutoSeededRandomPool prng;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  std::string str_signature;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="comment">// Create private key object from exponent</span></div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">const</span> CryptoPP::Integer privateExponent(private_key, <a class="code" href="classsecp256k1__cryptopp.html#a694800b6c1796c4d3c15b22b8bb41452">private_key_size</a>());</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="comment">// TODO(Samir): Need to use identity hash intead of SHA256</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  CryptoPP::ECDSA&lt;CryptoPP::ECP, CryptoPP::SHA256&gt;::PrivateKey privateKey;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  privateKey.Initialize(CryptoPP::ASN1::secp256k1(), privateExponent);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  memset(signature, 0, <a class="code" href="classsecp256k1__cryptopp.html#ad35babfdeeb8c5b5a7626d0f91ca7151">signature_size</a>());</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  CryptoPP::StringSource(message, msg_len, <span class="keyword">true</span>,</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">new</span> CryptoPP::SignerFilter(prng, CryptoPP::ECDSA&lt;CryptoPP::ECP,</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        CryptoPP::SHA256&gt;::Signer(privateKey),</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keyword">new</span> CryptoPP::ArraySink(signature, <a class="code" href="classsecp256k1__cryptopp.html#ad35babfdeeb8c5b5a7626d0f91ca7151">signature_size</a>())));</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="comment">// std::cout &lt;&lt; &quot;signature length: &quot; &lt;&lt; str_signature.length() &lt;&lt; std::endl;</span></div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="comment">// std::cout &lt;&lt; &quot;signature: &quot; &lt;&lt; str_signature &lt;&lt; std::endl;</span></div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div><div class="ttc" id="classsecp256k1__cryptopp_html_a694800b6c1796c4d3c15b22b8bb41452"><div class="ttname"><a href="classsecp256k1__cryptopp.html#a694800b6c1796c4d3c15b22b8bb41452">secp256k1_cryptopp::private_key_size</a></div><div class="ttdeci">size_t private_key_size()</div><div class="ttdef"><b>Definition:</b> secp256k1_cryptopp.cc:27</div></div>
-<div class="ttc" id="classsecp256k1__cryptopp_html_ad35babfdeeb8c5b5a7626d0f91ca7151"><div class="ttname"><a href="classsecp256k1__cryptopp.html#ad35babfdeeb8c5b5a7626d0f91ca7151">secp256k1_cryptopp::signature_size</a></div><div class="ttdeci">size_t signature_size()</div><div class="ttdef"><b>Definition:</b> secp256k1_cryptopp.cc:30</div></div>
-</div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
@@ -499,7 +493,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classdigital__signature.html#a9e6214a226846512148a07e9047eba4e">digital_signature</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                                     {</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">throw</span>;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad35babfdeeb8c5b5a7626d0f91ca7151"></a>
@@ -528,7 +522,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="classdigital__signature.html#ac5dd4744f5503e7dffd172b4d4e2c1a1">digital_signature</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classsecp256k1__cryptopp.html#a030d62f0c7d51900ba5042d62762454c">sign()</a>, and <a class="el" href="classsecp256k1__cryptopp.html#a1f6c0fa3fe5c9c894ebd65d113cbf59f">verify()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                          {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">return</span> 64;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div></div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
@@ -591,9 +585,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="classdigital__signature.html#a7e94ec6af72e7a935d68c5bb6f9040b7">digital_signature</a>.</p>
 
 <p class="reference">References <a class="el" href="classsecp256k1__cryptopp.html#a0107aae82f0890e339ec3711f8266cb5">public_key_size()</a>, and <a class="el" href="classsecp256k1__cryptopp.html#ad35babfdeeb8c5b5a7626d0f91ca7151">signature_size()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                                     {</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  CryptoPP::ECDSA&lt;CryptoPP::ECP, CryptoPP::SHA256&gt;::PublicKey publicKey;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  std::string input(reinterpret_cast&lt;const char*&gt;(public_key),</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <a class="code" href="classsecp256k1__cryptopp.html#a0107aae82f0890e339ec3711f8266cb5">public_key_size</a>());</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  CryptoPP::ECP::Point p;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  publicKey.AccessGroupParameters().Initialize(CryptoPP::ASN1::secp256k1());</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  publicKey.GetGroupParameters().GetCurve().DecodePoint(p, public_key,</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <a class="code" href="classsecp256k1__cryptopp.html#a0107aae82f0890e339ec3711f8266cb5">public_key_size</a>());</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  publicKey.SetPublicElement(p);</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="comment">// TODO(Samir): Change SHA256 to identity hash</span></div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  CryptoPP::ECDSA&lt;CryptoPP::ECP, CryptoPP::SHA256&gt;::Verifier</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      verifier(publicKey);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">return</span> verifier.VerifyMessage(message, msg_len, signature,</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <a class="code" href="classsecp256k1__cryptopp.html#ad35babfdeeb8c5b5a7626d0f91ca7151">signature_size</a>());</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div><div class="ttc" id="classsecp256k1__cryptopp_html_a0107aae82f0890e339ec3711f8266cb5"><div class="ttname"><a href="classsecp256k1__cryptopp.html#a0107aae82f0890e339ec3711f8266cb5">secp256k1_cryptopp::public_key_size</a></div><div class="ttdeci">size_t public_key_size()</div><div class="ttdef"><b>Definition:</b> secp256k1_cryptopp.cc:24</div></div>
-<div class="ttc" id="classsecp256k1__cryptopp_html_ad35babfdeeb8c5b5a7626d0f91ca7151"><div class="ttname"><a href="classsecp256k1__cryptopp.html#ad35babfdeeb8c5b5a7626d0f91ca7151">secp256k1_cryptopp::signature_size</a></div><div class="ttdeci">size_t signature_size()</div><div class="ttdef"><b>Definition:</b> secp256k1_cryptopp.cc:30</div></div>
-</div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
@@ -608,7 +600,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="secp256k1__cryptopp_8h_source.html">secp256k1_cryptopp.h</a></li>
+<li><a class="el" href="secp256k1__cryptopp_8h.html">secp256k1_cryptopp.h</a></li>
 <li><a class="el" href="secp256k1__cryptopp_8cc.html">secp256k1_cryptopp.cc</a></li>
 </ul>
 </div><!-- contents -->

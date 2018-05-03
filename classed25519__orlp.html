@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('classed25519__orlp.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="ed25519__orlp_8h_source.html">ed25519_orlp.h</a>&gt;</code></p>
+<p><code>#include &lt;ed25519_orlp.h&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for ed25519_orlp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -192,7 +192,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classdigital__signature.html#acf50cd1489f12fcea52c387cd8755eee">digital_signature</a>.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                                                  {</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> private_from_seed[64];</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  ed25519_create_keypair(public_key, private_from_seed, private_key);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="a77e9d68de3463eb4cd6fb95ed2478b6e"></a>
@@ -219,7 +219,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classdigital__signature.html#a9e608fb7ac353a4c0a15c307ace7bc04">digital_signature</a>.</p>
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                                {</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="ade1d11c5cee63838cd7533b0163f8220"></a>
@@ -246,7 +246,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classdigital__signature.html#a05407952582a3ae2b5cf8331de22b6a2">digital_signature</a>.</p>
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                            {</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="a237a8869f4b4837263493080d539e77c"></a>
@@ -273,7 +273,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classdigital__signature.html#a4cf45e916738753be5c462329d69fd07">digital_signature</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                                      {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">return</span> 32;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="a18c479cc1acce55717edeb9249097cde"></a>
@@ -300,7 +300,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classdigital__signature.html#aa6d33e206e40273f74f42717e527ea04">digital_signature</a>.</p>
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                     {</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">return</span> 32;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="ade4f681feefc1d2061fe255ca0ed20b2"></a>
@@ -327,10 +327,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="reference">References <a class="el" href="classdigital__signature.html#a3202cd2c59a29cbc4cb2fc1ad4a21eb5">digital_signature::register_factory()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                 {</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classdigital__signature.html#a3202cd2c59a29cbc4cb2fc1ad4a21eb5">ed25519_orlp::register_factory</a>(<span class="stringliteral">&quot;ed25519_orlp&quot;</span>,</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    [] {<span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classdigital__signature.html">digital_signature</a>*<span class="keyword">&gt;</span>(<span class="keyword">new</span> <a class="code" href="classed25519__orlp.html">ed25519_orlp</a>()); });</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div><div class="ttc" id="classdigital__signature_html_a3202cd2c59a29cbc4cb2fc1ad4a21eb5"><div class="ttname"><a href="classdigital__signature.html#a3202cd2c59a29cbc4cb2fc1ad4a21eb5">digital_signature::register_factory</a></div><div class="ttdeci">static void register_factory(std::string name, digital_signature_factory_function func)</div><div class="ttdef"><b>Definition:</b> digital_signature.cc:15</div></div>
-<div class="ttc" id="classed25519__orlp_html"><div class="ttname"><a href="classed25519__orlp.html">ed25519_orlp</a></div><div class="ttdef"><b>Definition:</b> ed25519_orlp.h:6</div></div>
-<div class="ttc" id="classdigital__signature_html"><div class="ttname"><a href="classdigital__signature.html">digital_signature</a></div><div class="ttdef"><b>Definition:</b> digital_signature.h:7</div></div>
-</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
@@ -392,7 +389,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="classdigital__signature.html#a1964b7b338f185dac9a57eccd5042d16">digital_signature</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classed25519__orlp.html#af3e1985b8a1aac55ca9bf0d634217b9e">sign_deterministic()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                                   {</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div></div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
@@ -460,8 +457,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="classdigital__signature.html#a9e6214a226846512148a07e9047eba4e">digital_signature</a>.</p>
 
 <p class="reference">References <a class="el" href="classed25519__orlp.html#a12093b6367fa8d8b1e07cdd03e37f86e">sign()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                                                 {</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="classed25519__orlp.html#a12093b6367fa8d8b1e07cdd03e37f86e">sign</a>(private_key, message, msg_len, signature);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div><div class="ttc" id="classed25519__orlp_html_a12093b6367fa8d8b1e07cdd03e37f86e"><div class="ttname"><a href="classed25519__orlp.html#a12093b6367fa8d8b1e07cdd03e37f86e">ed25519_orlp::sign</a></div><div class="ttdeci">void sign(const unsigned char *private_key, const unsigned char *message, const size_t msg_len, unsigned char *signature)</div><div class="ttdef"><b>Definition:</b> ed25519_orlp.cc:37</div></div>
-</div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
@@ -498,7 +494,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classdigital__signature.html#ac5dd4744f5503e7dffd172b4d4e2c1a1">digital_signature</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                    {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">return</span> 64;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="a06bb71085ec9579bfdd6e9e055c814ad"></a>
@@ -548,11 +544,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classdigital__signature.html#a7e94ec6af72e7a935d68c5bb6f9040b7">digital_signature</a>.</p>
-<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                                     {</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="ed25519__orlp_8h_source.html">ed25519_orlp.h</a></li>
+<li><a class="el" href="ed25519__orlp_8h.html">ed25519_orlp.h</a></li>
 <li><a class="el" href="ed25519__orlp_8cc.html">ed25519_orlp.cc</a></li>
 </ul>
 </div><!-- contents -->

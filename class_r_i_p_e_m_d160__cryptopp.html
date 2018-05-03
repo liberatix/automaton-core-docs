@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('class_r_i_p_e_m_d160__cryptopp.html','
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_r_i_p_e_m_d160__cryptopp_8h_source.html">RIPEMD160_cryptopp.h</a>&gt;</code></p>
+<p><code>#include &lt;RIPEMD160_cryptopp.h&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for RIPEMD160_cryptopp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -167,7 +167,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="reference">Referenced by <a class="el" href="class_r_i_p_e_m_d160__cryptopp.html#ae3959387bf99f77416fe2ad71a38e08b">register_self()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                                       {</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  hash = <span class="keyword">new</span> CryptoPP::RIPEMD160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div></div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
@@ -222,7 +222,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classhash__transformation.html#a73f11fd6e6c4d1038cd95bc5e9092564">hash_transformation</a>.</p>
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                                                  {</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  hash-&gt;CalculateDigest(digest, input, length);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="a8efd183d587bdad730ac04b3c189e38b"></a>
@@ -249,7 +249,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classhash__transformation.html#a95208282f15edb1e279d7e50f68005c0">hash_transformation</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                                   {</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">return</span> _digest_size;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="aacab63516aa0b2c9a331057e4715d9f5"></a>
@@ -277,7 +277,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classhash__transformation.html#a98d024dfe1950749f15a6c5e049d4ba3">hash_transformation</a>.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                                                     {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  hash-&gt;Final(digest);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae3959387bf99f77416fe2ad71a38e08b"></a>
@@ -304,10 +304,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="reference">References <a class="el" href="classhash__transformation.html#ab88b77f6eddd921e28f8548350fc5207">hash_transformation::register_factory()</a>, and <a class="el" href="class_r_i_p_e_m_d160__cryptopp.html#a8e817632299cb53d244228da52efc540">RIPEMD160_cryptopp()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                       {</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classhash__transformation.html#ab88b77f6eddd921e28f8548350fc5207">hash_transformation::register_factory</a>(<span class="stringliteral">&quot;RIPEMD160&quot;</span>,</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  [] {<span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classhash__transformation.html">hash_transformation</a>*<span class="keyword">&gt;</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      (<span class="keyword">new</span> <a class="code" href="class_r_i_p_e_m_d160__cryptopp.html#a8e817632299cb53d244228da52efc540">RIPEMD160_cryptopp</a>()); });</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div><div class="ttc" id="classhash__transformation_html"><div class="ttname"><a href="classhash__transformation.html">hash_transformation</a></div><div class="ttdef"><b>Definition:</b> hash_transformation.h:9</div></div>
-<div class="ttc" id="classhash__transformation_html_ab88b77f6eddd921e28f8548350fc5207"><div class="ttname"><a href="classhash__transformation.html#ab88b77f6eddd921e28f8548350fc5207">hash_transformation::register_factory</a></div><div class="ttdeci">static void register_factory(std::string name, factory_function_type func)</div><div class="ttdef"><b>Definition:</b> hash_transformation.cc:14</div></div>
-<div class="ttc" id="class_r_i_p_e_m_d160__cryptopp_html_a8e817632299cb53d244228da52efc540"><div class="ttname"><a href="class_r_i_p_e_m_d160__cryptopp.html#a8e817632299cb53d244228da52efc540">RIPEMD160_cryptopp::RIPEMD160_cryptopp</a></div><div class="ttdeci">RIPEMD160_cryptopp()</div><div class="ttdef"><b>Definition:</b> RIPEMD160_cryptopp.cc:6</div></div>
-</div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
@@ -345,7 +342,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classhash__transformation.html#a95a914b428f0152792109b1cfe3232da">hash_transformation</a>.</p>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                 {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  hash-&gt;Restart();</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="a82cd1bc536bf1968822104f378ef40f1"></a>
@@ -383,11 +380,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classhash__transformation.html#a095cbbcb30e10c406d10a2bdac7da22d">hash_transformation</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                                     {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  hash-&gt;Update(input, length);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="_r_i_p_e_m_d160__cryptopp_8h_source.html">RIPEMD160_cryptopp.h</a></li>
+<li><a class="el" href="_r_i_p_e_m_d160__cryptopp_8h.html">RIPEMD160_cryptopp.h</a></li>
 <li><a class="el" href="_r_i_p_e_m_d160__cryptopp_8cc.html">RIPEMD160_cryptopp.cc</a></li>
 </ul>
 </div><!-- contents -->

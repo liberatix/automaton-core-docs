@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('classdummy__state.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="dummy__state_8h_source.html">dummy_state.h</a>&gt;</code></p>
+<p><code>#include &lt;dummy_state.h&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for dummy_state:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -176,7 +176,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                                                   : hash(hash) {</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  google::InstallFailureSignalHandler();</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -204,7 +204,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classstate.html#ad278707657e9dcb4fa7a0dfcd2694e78">state</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                 {</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;COMMIT &quot;</span> &lt;&lt; pending_changes.size() &lt;&lt; <span class="stringliteral">&quot; PENDING CHANGES&quot;</span></div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      &lt;&lt; std::endl;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> kv : pending_changes) {</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">auto</span>&amp; key = kv.first;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">auto</span>&amp; value = kv.second;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    data.erase(key);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (value == <span class="stringliteral">&quot;&quot;</span>) {</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;REMOVING &quot;</span> &lt;&lt; key &lt;&lt; std::endl;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;ADDING &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; value &lt;&lt; std::endl;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      data.insert(kv);</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  pending_changes.clear();</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9ff5f778f04b99b81a09d1b4dea0d461"></a>
@@ -230,7 +230,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                                 {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">auto</span> start = data.lower_bound(path);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">auto</span> end = data.upper_bound(path + <span class="stringliteral">&quot;\xFF&quot;</span>);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = start; it != end; it++) {</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;DELETING FROM MAIN STATE &quot;</span> &lt;&lt; it-&gt;first &lt;&lt; std::endl;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    pending_changes.erase(it-&gt;first);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    pending_changes.insert(std::pair&lt;std::string, std::string&gt;(it-&gt;first, <span class="stringliteral">&quot;&quot;</span>));</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  start = pending_changes.lower_bound(path);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  end = pending_changes.upper_bound(path + <span class="stringliteral">&quot;\xFF&quot;</span>);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = start; it != end; it++) {</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (it-&gt;second != <span class="stringliteral">&quot;&quot;</span>) {</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;DELETING FROM PENDING CHANGES &quot;</span> &lt;&lt; it-&gt;first &lt;&lt; std::endl;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      pending_changes.erase(it-&gt;first);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      pending_changes.insert(</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          std::pair&lt;std::string, std::string&gt;(it-&gt;first, <span class="stringliteral">&quot;&quot;</span>));</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae2ac891b01460f0c1b58519b2182f317"></a>
@@ -257,7 +257,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classstate.html#a5b8a7cd9e92d0457b880d3b8aaec8d46">state</a>.</p>
-<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                  {</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  pending_changes.clear();</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2bf33298cd5849baeb7b934e01abedb2"></a>
@@ -283,7 +283,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                        {</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordflow">if</span> (pending_changes.count(key)) {</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">return</span> pending_changes.at(key);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  }</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">if</span> (data.count(key)) {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> data.at(key);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  }</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4ca39a3f6880761ac3b7c8676a0e14fd"></a>
@@ -309,7 +309,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                                                  {</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">return</span> std::vector&lt;std::string&gt;();</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="a11c4bbb34ace4a10a8af53ed6eb3d651"></a>
@@ -337,11 +337,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="reference">References <a class="el" href="classhash__transformation.html#a95208282f15edb1e279d7e50f68005c0">hash_transformation::digest_size()</a>, <a class="el" href="classhash__transformation.html#a98d024dfe1950749f15a6c5e049d4ba3">hash_transformation::final()</a>, <a class="el" href="classhash__transformation.html#a95a914b428f0152792109b1cfe3232da">hash_transformation::restart()</a>, and <a class="el" href="classhash__transformation.html#a095cbbcb30e10c406d10a2bdac7da22d">hash_transformation::update()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                                   {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;SIZE: &quot;</span> &lt;&lt; data.size() &lt;&lt; std::endl;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">if</span> (data.size() == 0) {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  }</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  hash-&gt;<a class="code" href="classhash__transformation.html#a95a914b428f0152792109b1cfe3232da">restart</a>();</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> kv : data) {</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    hash-&gt;<a class="code" href="classhash__transformation.html#a095cbbcb30e10c406d10a2bdac7da22d">update</a>((<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *)kv.first.c_str(), kv.first.size());</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    hash-&gt;<a class="code" href="classhash__transformation.html#a095cbbcb30e10c406d10a2bdac7da22d">update</a>((<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *)kv.second.c_str(), kv.second.size());</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> * digest = <span class="keyword">new</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>[hash-&gt;<a class="code" href="classhash__transformation.html#a95208282f15edb1e279d7e50f68005c0">digest_size</a>()];</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  hash-&gt;<a class="code" href="classhash__transformation.html#a98d024dfe1950749f15a6c5e049d4ba3">final</a>(digest);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  std::string result((<span class="keyword">const</span> <span class="keywordtype">char</span> *)digest, hash-&gt;<a class="code" href="classhash__transformation.html#a95208282f15edb1e279d7e50f68005c0">digest_size</a>());</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">delete</span>[] digest;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">return</span> result;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div><div class="ttc" id="classhash__transformation_html_a095cbbcb30e10c406d10a2bdac7da22d"><div class="ttname"><a href="classhash__transformation.html#a095cbbcb30e10c406d10a2bdac7da22d">hash_transformation::update</a></div><div class="ttdeci">virtual void update(const unsigned char *input, const size_t length)=0</div></div>
-<div class="ttc" id="classhash__transformation_html_a95a914b428f0152792109b1cfe3232da"><div class="ttname"><a href="classhash__transformation.html#a95a914b428f0152792109b1cfe3232da">hash_transformation::restart</a></div><div class="ttdeci">virtual void restart()=0</div></div>
-<div class="ttc" id="classhash__transformation_html_a95208282f15edb1e279d7e50f68005c0"><div class="ttname"><a href="classhash__transformation.html#a95208282f15edb1e279d7e50f68005c0">hash_transformation::digest_size</a></div><div class="ttdeci">virtual unsigned int digest_size() const =0</div></div>
-<div class="ttc" id="classhash__transformation_html_a98d024dfe1950749f15a6c5e049d4ba3"><div class="ttname"><a href="classhash__transformation.html#a98d024dfe1950749f15a6c5e049d4ba3">hash_transformation::final</a></div><div class="ttdeci">virtual void final(unsigned char *digest)=0</div></div>
-</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
@@ -390,11 +386,11 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                                                    {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  pending_changes.erase(key);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  pending_changes.insert(std::pair&lt;std::string, std::string&gt;(key, value));</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="dummy__state_8h_source.html">dummy_state.h</a></li>
+<li><a class="el" href="dummy__state_8h.html">dummy_state.h</a></li>
 <li><a class="el" href="dummy__state_8cc.html">dummy_state.cc</a></li>
 </ul>
 </div><!-- contents -->

@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('classschema.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="schema_8h_source.html">schema.h</a>&gt;</code></p>
+<p><code>#include &lt;schema.h&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for schema:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -262,11 +262,7 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ae674b0dfe6af47873d7af4539945349aa1d13fb1f60ed574cb8326e0f10c36e8d"></a>string&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ae674b0dfe6af47873d7af4539945349aa6b7cc7d0aba9682c549a0243ff5dff9d"></a>int32&#160;</td><td class="fielddoc"></td></tr>
 </table>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                  {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classschema.html#ae674b0dfe6af47873d7af4539945349aa6512adf7f5102bbd85edf38b4230653b">unknown</a> = 0,</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classschema.html#ae674b0dfe6af47873d7af4539945349aaaf3be69297c8f35da0c78b6086d26a18">message_type</a> =  1,</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classschema.html#ae674b0dfe6af47873d7af4539945349aa036b0bff8d38d541d918fb7ef3c9706d">enum_type</a> = 2,</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">string</span> = 4,</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classschema.html#ae674b0dfe6af47873d7af4539945349aa6b7cc7d0aba9682c549a0243ff5dff9d">int32</a> = 5,</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  };</div><div class="ttc" id="classschema_html_ae674b0dfe6af47873d7af4539945349aaaf3be69297c8f35da0c78b6086d26a18"><div class="ttname"><a href="classschema.html#ae674b0dfe6af47873d7af4539945349aaaf3be69297c8f35da0c78b6086d26a18">schema::message_type</a></div><div class="ttdef"><b>Definition:</b> schema.h:28</div></div>
-<div class="ttc" id="classschema_html_ae674b0dfe6af47873d7af4539945349aa6512adf7f5102bbd85edf38b4230653b"><div class="ttname"><a href="classschema.html#ae674b0dfe6af47873d7af4539945349aa6512adf7f5102bbd85edf38b4230653b">schema::unknown</a></div><div class="ttdef"><b>Definition:</b> schema.h:27</div></div>
-<div class="ttc" id="classschema_html_ae674b0dfe6af47873d7af4539945349aa036b0bff8d38d541d918fb7ef3c9706d"><div class="ttname"><a href="classschema.html#ae674b0dfe6af47873d7af4539945349aa036b0bff8d38d541d918fb7ef3c9706d">schema::enum_type</a></div><div class="ttdef"><b>Definition:</b> schema.h:29</div></div>
-<div class="ttc" id="classschema_html_ae674b0dfe6af47873d7af4539945349aa6b7cc7d0aba9682c549a0243ff5dff9d"><div class="ttname"><a href="classschema.html#ae674b0dfe6af47873d7af4539945349aa6b7cc7d0aba9682c549a0243ff5dff9d">schema::int32</a></div><div class="ttdef"><b>Definition:</b> schema.h:31</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -293,7 +289,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                     {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">auto</span> it = schema_factory.find(name);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordflow">if</span> (it == schema_factory.end()) {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> NULL;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> it-&gt;second();</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  }</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9ed939920603b50b1e02299f659182e2"></a>
@@ -1471,7 +1467,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="reference">Referenced by <a class="el" href="classprotobuf__schema.html#a8cccd40b1bc9764958530b00863045a6">protobuf_schema::register_self()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;          {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  schema_factory[name] = func;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div></div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
@@ -1927,7 +1923,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="schema_8h_source.html">schema.h</a></li>
+<li><a class="el" href="schema_8h.html">schema.h</a></li>
 <li><a class="el" href="schema_8cc.html">schema.cc</a></li>
 </ul>
 </div><!-- contents -->

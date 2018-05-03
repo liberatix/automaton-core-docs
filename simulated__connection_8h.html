@@ -100,8 +100,8 @@ $(document).ready(function(){initNavTree('simulated__connection_8h.html','');});
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;queue&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="acceptor_8h_source.html">network/acceptor.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="connection_8h_source.html">network/connection.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="acceptor_8h.html">network/acceptor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="connection_8h.html">network/connection.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for simulated_connection.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -113,9 +113,7 @@ $(document).ready(function(){initNavTree('simulated__connection_8h.html','');});
 <area shape="rect" id="node8" href="connection_8h.html" title="network/connection.h" alt="" coords="232,155,348,181"/>
 </map>
 </div>
-</div>
-<p><a href="simulated__connection_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structconnection__params.html">connection_params</a></td></tr>
@@ -178,15 +176,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a430b444c74dd3fd1472a31714ec5f1cea74b45adb6660d1b9595778088ce0879e"></a>refuse&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a430b444c74dd3fd1472a31714ec5f1cead606e435413ea0944dd00d49e901e4ed"></a>error&#160;</td><td class="fielddoc"></td></tr>
 </table>
-<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1cea6eac2f9a58ab1f8e22c2f4676df2277c">default_event</a> = 0,  <span class="comment">//</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1cea8f3c9fcc480d57857ea2b6e07d6d0769">disconnect</a> = 1,  <span class="comment">// this is created when disconnect is called and handled on</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">// the other end after some lag</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1cea89c1090e47017bedd5a27383f63ddbfe">connection_attempt</a> = 2,  <span class="comment">// this is created when connect is called and handled</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="comment">// on the other end after some lag; on_requested is called</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1cea95bf884f6d573b69a16ab35455d48e66">send</a> = 3,  <span class="comment">// this is created when send is called and handled after some lag;</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">// when handling send on_message_sent is called and read events are generated</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="comment">// for the other end</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1ceaea7c12cb3031ad9e88104ce9859ce1c5">read</a> = 4,  <span class="comment">// a message need to be read and on_message_received to be called</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="comment">// if no read has been called, event time is increased</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1ceae24c8b223f28d41cd77e62c50e57db6c">accept</a> = 5,  <span class="comment">// this is created when a connection is accepted (on_requested</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">// returns true) and handled on the other end afted some lag</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1cea74b45adb6660d1b9595778088ce0879e">refuse</a> = 6,  <span class="comment">// as above</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1cead606e435413ea0944dd00d49e901e4ed">error</a> = 7</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div><div class="ttc" id="simulated__connection_8h_html_a430b444c74dd3fd1472a31714ec5f1cea89c1090e47017bedd5a27383f63ddbfe"><div class="ttname"><a href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1cea89c1090e47017bedd5a27383f63ddbfe">connection_attempt</a></div><div class="ttdef"><b>Definition:</b> simulated_connection.h:22</div></div>
-<div class="ttc" id="simulated__connection_8h_html_a430b444c74dd3fd1472a31714ec5f1ceae24c8b223f28d41cd77e62c50e57db6c"><div class="ttname"><a href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1ceae24c8b223f28d41cd77e62c50e57db6c">accept</a></div><div class="ttdef"><b>Definition:</b> simulated_connection.h:29</div></div>
-<div class="ttc" id="simulated__connection_8h_html_a430b444c74dd3fd1472a31714ec5f1ceaea7c12cb3031ad9e88104ce9859ce1c5"><div class="ttname"><a href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1ceaea7c12cb3031ad9e88104ce9859ce1c5">read</a></div><div class="ttdef"><b>Definition:</b> simulated_connection.h:27</div></div>
-<div class="ttc" id="simulated__connection_8h_html_a430b444c74dd3fd1472a31714ec5f1cea74b45adb6660d1b9595778088ce0879e"><div class="ttname"><a href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1cea74b45adb6660d1b9595778088ce0879e">refuse</a></div><div class="ttdef"><b>Definition:</b> simulated_connection.h:31</div></div>
-<div class="ttc" id="simulated__connection_8h_html_a430b444c74dd3fd1472a31714ec5f1cea6eac2f9a58ab1f8e22c2f4676df2277c"><div class="ttname"><a href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1cea6eac2f9a58ab1f8e22c2f4676df2277c">default_event</a></div><div class="ttdef"><b>Definition:</b> simulated_connection.h:19</div></div>
-<div class="ttc" id="simulated__connection_8h_html_a430b444c74dd3fd1472a31714ec5f1cea95bf884f6d573b69a16ab35455d48e66"><div class="ttname"><a href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1cea95bf884f6d573b69a16ab35455d48e66">send</a></div><div class="ttdef"><b>Definition:</b> simulated_connection.h:24</div></div>
-<div class="ttc" id="simulated__connection_8h_html_a430b444c74dd3fd1472a31714ec5f1cea8f3c9fcc480d57857ea2b6e07d6d0769"><div class="ttname"><a href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1cea8f3c9fcc480d57857ea2b6e07d6d0769">disconnect</a></div><div class="ttdef"><b>Definition:</b> simulated_connection.h:20</div></div>
-<div class="ttc" id="simulated__connection_8h_html_a430b444c74dd3fd1472a31714ec5f1cead606e435413ea0944dd00d49e901e4ed"><div class="ttname"><a href="simulated__connection_8h.html#a430b444c74dd3fd1472a31714ec5f1cead606e435413ea0944dd00d49e901e4ed">error</a></div><div class="ttdef"><b>Definition:</b> simulated_connection.h:32</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
@@ -205,8 +195,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                                 {</div><div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <a class="code" href="tcp__implementation_8cc.html#a78762d6b4a33c275ef5fc4f09e8be589">console_mutex</a>.lock();</div><div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  std::cout &lt;&lt; s &lt;&lt; std::endl;</div><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <a class="code" href="tcp__implementation_8cc.html#a78762d6b4a33c275ef5fc4f09e8be589">console_mutex</a>.unlock();</div><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div><div class="ttc" id="tcp__implementation_8cc_html_a78762d6b4a33c275ef5fc4f09e8be589"><div class="ttname"><a href="tcp__implementation_8cc.html#a78762d6b4a33c275ef5fc4f09e8be589">console_mutex</a></div><div class="ttdeci">static std::mutex console_mutex</div><div class="ttdef"><b>Definition:</b> tcp_implementation.cc:313</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6ea287607937ea2e213045138b074e7e"></a>

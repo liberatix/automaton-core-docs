@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('classproto__error__collector.html','')
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="protobuf__schema_8h_source.html">protobuf_schema.h</a>&gt;</code></p>
+<p><code>#include &lt;protobuf_schema.h&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for proto_error_collector:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -144,7 +144,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;                                             {</div><div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160;  errors_number = 0;</div><div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160;  errors_list = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -191,8 +191,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;                              {  <span class="comment">// Human-readable error message.</span></div><div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;  std::cerr &lt;&lt; <span class="stringliteral">&quot;*Error: schema: &quot;</span> &lt;&lt; <a class="code" href="classschema.html">schema</a> &lt;&lt; <span class="stringliteral">&quot; &lt;&quot;</span> &lt;&lt; element_name</div><div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;&gt; error message:&quot;</span> &lt;&lt; message &lt;&lt; std::endl;</div><div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;  errors_number++;</div><div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;  errors_list += <span class="stringliteral">&quot;Error: schema: &quot;</span> + <a class="code" href="classschema.html">schema</a> + <span class="stringliteral">&quot; &lt;&quot;</span> + element_name +</div><div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;      <span class="stringliteral">&quot;&gt; error message:&quot;</span> + message + <span class="stringliteral">&quot;\n&quot;</span>;</div><div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;}</div><div class="ttc" id="classschema_html"><div class="ttname"><a href="classschema.html">schema</a></div><div class="ttdef"><b>Definition:</b> schema.h:21</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9fd55308b3d4ad248a00301cd7ae4b15"></a>
@@ -238,8 +237,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;                              {  <span class="comment">// Human-readable error message.</span></div><div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;  std::cerr &lt;&lt; <span class="stringliteral">&quot;*Warning: schema: &quot;</span> &lt;&lt; <a class="code" href="classschema.html">schema</a> &lt;&lt; <span class="stringliteral">&quot; &lt;&quot;</span> &lt;&lt;</div><div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;      element_name &lt;&lt; <span class="stringliteral">&quot;&gt; error message:&quot;</span> &lt;&lt; message &lt;&lt; std::endl;</div><div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;  errors_number++;</div><div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;  errors_list += <span class="stringliteral">&quot;Warning: schema: &quot;</span> + <a class="code" href="classschema.html">schema</a> + <span class="stringliteral">&quot; &lt;&quot;</span> + element_name</div><div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;      + <span class="stringliteral">&quot;&gt; error message:&quot;</span> + message + <span class="stringliteral">&quot;\n&quot;</span>;</div><div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;}</div><div class="ttc" id="classschema_html"><div class="ttname"><a href="classschema.html">schema</a></div><div class="ttdef"><b>Definition:</b> schema.h:21</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab44d6415936b9a17764f49572a351c5d"></a>
@@ -256,7 +254,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;                                         {</div><div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;  errors_number = 0;</div><div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;  errors_list = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="a611e63cc95a23ccf94eb4c5cd3526f65"></a>
@@ -273,7 +271,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;                                                {</div><div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;  <span class="keywordflow">return</span> errors_list;</div><div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab1efe4810c82d359e7b27f78b8ccdf0e"></a>
@@ -290,11 +288,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;                                             {</div><div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;  <span class="keywordflow">return</span> errors_number;</div><div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;}</div></div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="protobuf__schema_8h_source.html">protobuf_schema.h</a></li>
+<li><a class="el" href="protobuf__schema_8h.html">protobuf_schema.h</a></li>
 <li><a class="el" href="protobuf__schema_8cc.html">protobuf_schema.cc</a></li>
 </ul>
 </div><!-- contents -->

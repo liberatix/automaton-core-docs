@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('state__impl_8cc.html','');});
 <div class="title">state_impl.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="state__impl_8h_source.html">state/state_impl.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="state__impl_8h.html">state/state_impl.h</a>&quot;</code><br />
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;iomanip&gt;</code><br />
@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('state__impl_8cc.html','');});
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;set&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
-<code>#include &quot;<a class="el" href="hash__transformation_8h_source.html">crypto/hash_transformation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hash__transformation_8h.html">crypto/hash_transformation.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for state_impl.cc:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -169,7 +169,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="reference">Referenced by <a class="el" href="classstate__impl.html#a04bcd08fd225af19a3fc936264b56f08">state_impl::delete_node_tree()</a>, <a class="el" href="classstate__impl.html#a72adeb91e889b6804f9031caff4b6ea6">state_impl::erase()</a>, and <a class="el" href="classstate__impl.html#ab49b224d11b29374a372cdaa68cb6a8c">state_impl::print_subtrie()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                                    {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  std::stringstream ss;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; s.size(); i++) {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    ss &lt;&lt; std::hex &lt;&lt; std::uppercase &lt;&lt; std::setw(2) &lt;&lt;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; (<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(s[i]) &amp; 0xff);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  }</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">return</span> ss.str();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div></div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
