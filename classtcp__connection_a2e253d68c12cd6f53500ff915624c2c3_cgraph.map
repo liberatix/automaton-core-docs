@@ -1,0 +1,5 @@
+<map id="tcp_connection::connect" name="tcp_connection::connect">
+<area shape="rect" id="node2" href="$tcp__implementation_8cc.html#a3140a2c14463bc8f41b5bc02db730466" title="logging" alt="" coords="220,5,275,32"/>
+<area shape="rect" id="node3" href="$classconnection_1_1connection__handler.html#adc5a89d1df3b74130abf70989e3b5b9c" title="connection::connection\l_handler::on_connected" alt="" coords="183,57,312,98"/>
+<area shape="rect" id="node4" href="$classconnection_1_1connection__handler.html#a4068533717e6d78178e1158743ddb9af" title="connection::connection\l_handler::on_error" alt="" coords="185,122,309,163"/>
+</map>

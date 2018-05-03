@@ -1,0 +1,4 @@
+<map id="connection" name="connection">
+<area shape="rect" id="node2" href="$classsimulated__connection.html" title="simulated_connection" alt="" coords="5,80,124,107"/>
+<area shape="rect" id="node3" href="$classtcp__connection.html" title="tcp_connection" alt="" coords="148,80,237,107"/>
+</map>

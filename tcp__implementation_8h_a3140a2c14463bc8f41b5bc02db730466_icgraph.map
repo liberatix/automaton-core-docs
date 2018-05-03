@@ -1,0 +1,8 @@
+<map id="logging" name="logging">
+<area shape="rect" id="node2" href="$classtcp__connection.html#ade5a63248071cde72ac88825738edf88" title="tcp_connection::async_read" alt="" coords="109,5,255,32"/>
+<area shape="rect" id="node3" href="$classtcp__connection.html#a143689afefccb1a76e6ab6c7df66d57c" title="tcp_connection::async_send" alt="" coords="108,56,256,83"/>
+<area shape="rect" id="node4" href="$classtcp__connection.html#a2e253d68c12cd6f53500ff915624c2c3" title="tcp_connection::connect" alt="" coords="117,107,247,133"/>
+<area shape="rect" id="node5" href="$classtcp__connection.html#a22ed28de450e2937c4354f60b85100f9" title="tcp_connection::disconnect" alt="" coords="111,157,253,184"/>
+<area shape="rect" id="node6" href="$classtcp__acceptor.html#a0ffefa3221c9136d5fc8646b587e808e" title="tcp_acceptor::start\l_accepting" alt="" coords="130,209,234,250"/>
+<area shape="rect" id="node7" href="$classtcp__connection.html#a1d97f53dcfe90a9edf5d9970c88e0e1b" title="tcp_connection::~tcp\l_connection" alt="" coords="125,274,239,315"/>
+</map>

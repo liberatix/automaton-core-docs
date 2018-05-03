@@ -1,0 +1,5 @@
+<map id="connection::connection_handler::on_error" name="connection::connection_handler::on_error">
+<area shape="rect" id="node2" href="$classtcp__connection.html#ade5a63248071cde72ac88825738edf88" title="tcp_connection::async_read" alt="" coords="177,5,324,32"/>
+<area shape="rect" id="node3" href="$classtcp__connection.html#a2e253d68c12cd6f53500ff915624c2c3" title="tcp_connection::connect" alt="" coords="186,56,315,83"/>
+<area shape="rect" id="node4" href="$classtcp__connection.html#a22ed28de450e2937c4354f60b85100f9" title="tcp_connection::disconnect" alt="" coords="179,107,322,133"/>
+</map>

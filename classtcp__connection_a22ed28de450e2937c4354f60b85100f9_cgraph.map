@@ -1,0 +1,5 @@
+<map id="tcp_connection::disconnect" name="tcp_connection::disconnect">
+<area shape="rect" id="node2" href="$tcp__implementation_8cc.html#a3140a2c14463bc8f41b5bc02db730466" title="logging" alt="" coords="240,5,295,32"/>
+<area shape="rect" id="node3" href="$classconnection_1_1connection__handler.html#a491da1663af3148a6212f3499586179f" title="connection::connection\l_handler::on_disconnected" alt="" coords="196,57,339,98"/>
+<area shape="rect" id="node4" href="$classconnection_1_1connection__handler.html#a4068533717e6d78178e1158743ddb9af" title="connection::connection\l_handler::on_error" alt="" coords="205,122,329,163"/>
+</map>

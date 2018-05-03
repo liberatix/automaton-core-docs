@@ -1,0 +1,4 @@
+<map id="digital_signature::register_factory" name="digital_signature::register_factory">
+<area shape="rect" id="node2" href="$classed25519__orlp.html#ade4f681feefc1d2061fe255ca0ed20b2" title="ed25519_orlp::register_self" alt="" coords="153,5,296,32"/>
+<area shape="rect" id="node3" href="$classsecp256k1__cryptopp.html#afbac0a2897bf81722652633eb318af1f" title="secp256k1_cryptopp\l::register_self" alt="" coords="167,57,282,98"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="connection.h" name="connection.h">
+<area shape="rect" id="node2" href="$acceptor_8h.html" title="acceptor.h" alt="" coords="158,80,227,107"/>
+<area shape="rect" id="node4" href="$simulated__connection_8h.html" title="simulated_connection.h" alt="" coords="5,155,132,181"/>
+<area shape="rect" id="node5" href="$tcp__implementation_8h.html" title="tcp_implementation.h" alt="" coords="254,155,371,181"/>
+<area shape="rect" id="node7" href="$connection_8cc.html" title="connection.cc" alt="" coords="302,80,385,107"/>
+<area shape="rect" id="node3" href="$acceptor_8cc.html" title="acceptor.cc" alt="" coords="156,155,229,181"/>
+<area shape="rect" id="node6" href="$tcp__implementation_8cc.html" title="tcp_implementation.cc" alt="" coords="252,229,373,256"/>
+</map>

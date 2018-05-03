@@ -1,0 +1,4 @@
+<map id="tcp_connection::async_send" name="tcp_connection::async_send">
+<area shape="rect" id="node2" href="$tcp__implementation_8cc.html#a3140a2c14463bc8f41b5bc02db730466" title="logging" alt="" coords="248,5,303,32"/>
+<area shape="rect" id="node3" href="$classconnection_1_1connection__handler.html#a78c8e34fe6a7fcf2cf02d9e1e9dad972" title="connection::connection\l_handler::on_message_sent" alt="" coords="201,57,349,98"/>
+</map>
