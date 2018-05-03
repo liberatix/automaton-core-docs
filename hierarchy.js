@@ -16,10 +16,10 @@ var hierarchy =
       [ "secp256k1_cryptopp", "classsecp256k1__cryptopp.html", null ]
     ] ],
     [ "ErrorCollector", null, [
-      [ "io_error_collector", "classio__error__collector.html", null ]
+      [ "proto_error_collector", "classproto__error__collector.html", null ]
     ] ],
     [ "ErrorCollector", null, [
-      [ "proto_error_collector", "classproto__error__collector.html", null ]
+      [ "io_error_collector", "classio__error__collector.html", null ]
     ] ],
     [ "event", "structevent.html", null ],
     [ "schema::field_info", "structschema_1_1field__info.html", null ],
@@ -36,8 +36,6 @@ var hierarchy =
     [ "schema::schema_definition", "classschema_1_1schema__definition.html", [
       [ "protobuf_schema_definition", "classprotobuf__schema__definition.html", null ]
     ] ],
-    [ "scriptable", "classscriptable.html", null ],
-    [ "scriptable_engine", "classscriptable__engine.html", null ],
     [ "secure_random", "classsecure__random.html", [
       [ "secure_random_cryptopp", "classsecure__random__cryptopp.html", null ]
     ] ],

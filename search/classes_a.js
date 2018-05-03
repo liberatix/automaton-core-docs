@@ -2,8 +2,6 @@ var searchData=
 [
   ['schema',['schema',['../classschema.html',1,'']]],
   ['schema_5fdefinition',['schema_definition',['../classschema_1_1schema__definition.html',1,'schema']]],
-  ['scriptable',['scriptable',['../classscriptable.html',1,'']]],
-  ['scriptable_5fengine',['scriptable_engine',['../classscriptable__engine.html',1,'']]],
   ['secp256k1_5fcryptopp',['secp256k1_cryptopp',['../classsecp256k1__cryptopp.html',1,'']]],
   ['secure_5frandom',['secure_random',['../classsecure__random.html',1,'']]],
   ['secure_5frandom_5fcryptopp',['secure_random_cryptopp',['../classsecure__random__cryptopp.html',1,'']]],

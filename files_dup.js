@@ -47,14 +47,6 @@ var files_dup =
       [ "schema", "classschema.html", "classschema" ],
       [ "schema_definition", "classschema_1_1schema__definition.html", "classschema_1_1schema__definition" ]
     ] ],
-    [ "scriptable.cc", "scriptable_8cc.html", null ],
-    [ "scriptable.h", "scriptable_8h.html", [
-      [ "scriptable", "classscriptable.html", "classscriptable" ]
-    ] ],
-    [ "scriptable_engine.cc", "scriptable__engine_8cc.html", null ],
-    [ "scriptable_engine.h", "scriptable__engine_8h.html", [
-      [ "scriptable_engine", "classscriptable__engine.html", null ]
-    ] ],
     [ "secp256k1_cryptopp.cc", "secp256k1__cryptopp_8cc.html", null ],
     [ "secp256k1_cryptopp.h", "secp256k1__cryptopp_8h.html", [
       [ "secp256k1_cryptopp", "classsecp256k1__cryptopp.html", "classsecp256k1__cryptopp" ]

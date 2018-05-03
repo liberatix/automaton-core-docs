@@ -190,6 +190,18 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Generates a public key from the given private key.</p>
+<p>The format is implementation specific.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">private_key</td><td>the private key as a buffer. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">public_key</td><td>a pointer to the buffer to recive the public key.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classsecp256k1__cryptopp.html#a0107aae82f0890e339ec3711f8266cb5">public_key_size()</a> == public_key in bytes. </dd>
+<dd>
+<a class="el" href="classsecp256k1__cryptopp.html#a694800b6c1796c4d3c15b22b8bb41452">private_key_size()</a> == private_key in bytes. </dd></dl>
 
 <p>Implements <a class="el" href="classdigital__signature.html#acf50cd1489f12fcea52c387cd8755eee">digital_signature</a>.</p>
 
@@ -229,6 +241,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns true of this implementation can sign deterministic signatures using the <a class="el" href="classsecp256k1__cryptopp.html#af4a661ab3c96d18cfbc868e103520b8d">sign_deterministic()</a> function </p>
 
 <p>Implements <a class="el" href="classdigital__signature.html#a9e608fb7ac353a4c0a15c307ace7bc04">digital_signature</a>.</p>
 
@@ -256,6 +269,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The size of the random k in bytes; </p>
 
 <p>Implements <a class="el" href="classdigital__signature.html#a05407952582a3ae2b5cf8331de22b6a2">digital_signature</a>.</p>
 
@@ -283,6 +297,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The size of the private key in bytes </p>
 
 <p>Implements <a class="el" href="classdigital__signature.html#a4cf45e916738753be5c462329d69fd07">digital_signature</a>.</p>
 
@@ -323,6 +338,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The size of the public key in bytes </p>
 
 <p>Implements <a class="el" href="classdigital__signature.html#aa6d33e206e40273f74f42717e527ea04">digital_signature</a>.</p>
 
@@ -422,6 +438,17 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Signs a message using a private key and a message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">private_key</td><td>the private key as a buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>the message as a pointer to a buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg_len</td><td>the lenght of the message that will be signed. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">signature</td><td>a pointer to the buffer to receive the signature.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>Precondition <a class="el" href="classsecp256k1__cryptopp.html#ad35babfdeeb8c5b5a7626d0f91ca7151">signature_size()</a> == signature in bytes. </dd></dl>
 
 <p>Implements <a class="el" href="classdigital__signature.html#a1964b7b338f185dac9a57eccd5042d16">digital_signature</a>.</p>
 
@@ -491,6 +518,18 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Signs a deterministic message using a private key, random k and message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">private_key</td><td>the private key as a buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>the message as a pointer to a buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg_len</td><td>the lenght of the message that will be signed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">k</td><td>the random k used the sign the message </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">signature</td><td>a pointer to the buffer to recive the signature</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>Precondition <a class="el" href="classsecp256k1__cryptopp.html#ad35babfdeeb8c5b5a7626d0f91ca7151">signature_size()</a> == signature in bytes. </dd></dl>
 
 <p>Implements <a class="el" href="classdigital__signature.html#a9e6214a226846512148a07e9047eba4e">digital_signature</a>.</p>
 
@@ -518,6 +557,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The size of the signature in bytes </p>
 
 <p>Implements <a class="el" href="classdigital__signature.html#ac5dd4744f5503e7dffd172b4d4e2c1a1">digital_signature</a>.</p>
 
@@ -581,6 +621,16 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Verifies that a message was signed by the privated key coresponding to the given public key.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">public_key</td><td>the public key as a buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>the message as a pointer to a buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg_len</td><td>the lenght of the message </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signature</td><td>a pointer to the buffer to recive the signature </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classdigital__signature.html#a7e94ec6af72e7a935d68c5bb6f9040b7">digital_signature</a>.</p>
 

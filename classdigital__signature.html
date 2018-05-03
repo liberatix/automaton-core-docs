@@ -144,7 +144,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a3202cd2c59a29cbc4cb2fc1ad4a21eb5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdigital__signature.html#a3202cd2c59a29cbc4cb2fc1ad4a21eb5">register_factory</a> (std::string name, <a class="el" href="classdigital__signature.html#a05aa2ec79bab45bc697849726ad96db4">digital_signature_factory_function</a> func)</td></tr>
 <tr class="separator:a3202cd2c59a29cbc4cb2fc1ad4a21eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Digital signature interface </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a05aa2ec79bab45bc697849726ad96db4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a05aa2ec79bab45bc697849726ad96db4">&#9670;&nbsp;</a></span>digital_signature_factory_function</h2>
 
@@ -156,6 +158,7 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>A function pointer given to the register_factory to register. The function will be used by <a class="el" href="classdigital__signature.html#a14f21edb5a5d3e097fb4ab5fb23ae1f0">create()</a> to instantiate a derived class implementing this interface </p>
 
 </div>
 </div>
@@ -183,6 +186,14 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Instantiates a class using the registered function in the factory.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to <a class="el" href="classdigital__signature.html">digital_signature</a> derived class implementing the interface or nullptr if there is no registered function with this name.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The registered name of the function used to instantiate an implementation of this interface. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -219,6 +230,18 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Generates a public key from the given private key.</p>
+<p>The format is implementation specific.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">private_key</td><td>the private key as a buffer. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">public_key</td><td>a pointer to the buffer to recive the public key.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdigital__signature.html#aa6d33e206e40273f74f42717e527ea04">public_key_size()</a> == public_key in bytes. </dd>
+<dd>
+<a class="el" href="classdigital__signature.html#a4cf45e916738753be5c462329d69fd07">private_key_size()</a> == private_key in bytes. </dd></dl>
 
 <p>Implemented in <a class="el" href="classed25519__orlp.html#a6f4cf662a2a596c56255c54b7d027d49">ed25519_orlp</a>, and <a class="el" href="classsecp256k1__cryptopp.html#ad1159f2f3e20436d34c6b21c2d4f79a3">secp256k1_cryptopp</a>.</p>
 
@@ -246,8 +269,9 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns true of this implementation can sign deterministic signatures using the <a class="el" href="classdigital__signature.html#a9e6214a226846512148a07e9047eba4e">sign_deterministic()</a> function </p>
 
-<p>Implemented in <a class="el" href="classsecp256k1__cryptopp.html#a8a95ecaef4672a4273037e85608ba038">secp256k1_cryptopp</a>, and <a class="el" href="classed25519__orlp.html#a77e9d68de3463eb4cd6fb95ed2478b6e">ed25519_orlp</a>.</p>
+<p>Implemented in <a class="el" href="classed25519__orlp.html#a77e9d68de3463eb4cd6fb95ed2478b6e">ed25519_orlp</a>, and <a class="el" href="classsecp256k1__cryptopp.html#a8a95ecaef4672a4273037e85608ba038">secp256k1_cryptopp</a>.</p>
 
 </div>
 </div>
@@ -273,8 +297,9 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The size of the random k in bytes; </p>
 
-<p>Implemented in <a class="el" href="classsecp256k1__cryptopp.html#a9917cba96a1320416667115233e82a1f">secp256k1_cryptopp</a>, and <a class="el" href="classed25519__orlp.html#ade1d11c5cee63838cd7533b0163f8220">ed25519_orlp</a>.</p>
+<p>Implemented in <a class="el" href="classed25519__orlp.html#ade1d11c5cee63838cd7533b0163f8220">ed25519_orlp</a>, and <a class="el" href="classsecp256k1__cryptopp.html#a9917cba96a1320416667115233e82a1f">secp256k1_cryptopp</a>.</p>
 
 </div>
 </div>
@@ -300,8 +325,9 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The size of the private key in bytes </p>
 
-<p>Implemented in <a class="el" href="classsecp256k1__cryptopp.html#a694800b6c1796c4d3c15b22b8bb41452">secp256k1_cryptopp</a>, and <a class="el" href="classed25519__orlp.html#a237a8869f4b4837263493080d539e77c">ed25519_orlp</a>.</p>
+<p>Implemented in <a class="el" href="classed25519__orlp.html#a237a8869f4b4837263493080d539e77c">ed25519_orlp</a>, and <a class="el" href="classsecp256k1__cryptopp.html#a694800b6c1796c4d3c15b22b8bb41452">secp256k1_cryptopp</a>.</p>
 
 </div>
 </div>
@@ -327,8 +353,9 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The size of the public key in bytes </p>
 
-<p>Implemented in <a class="el" href="classsecp256k1__cryptopp.html#a0107aae82f0890e339ec3711f8266cb5">secp256k1_cryptopp</a>, and <a class="el" href="classed25519__orlp.html#a18c479cc1acce55717edeb9249097cde">ed25519_orlp</a>.</p>
+<p>Implemented in <a class="el" href="classed25519__orlp.html#a18c479cc1acce55717edeb9249097cde">ed25519_orlp</a>, and <a class="el" href="classsecp256k1__cryptopp.html#a0107aae82f0890e339ec3711f8266cb5">secp256k1_cryptopp</a>.</p>
 
 </div>
 </div>
@@ -365,6 +392,14 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Registers the create function for a given implementation, will overwrite already registered functions.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>a string that will be used to call this function. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>function pointers used to instantiate classes implementing the interface. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">Referenced by <a class="el" href="classed25519__orlp.html#ade4f681feefc1d2061fe255ca0ed20b2">ed25519_orlp::register_self()</a>, and <a class="el" href="classsecp256k1__cryptopp.html#afbac0a2897bf81722652633eb318af1f">secp256k1_cryptopp::register_self()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -426,8 +461,19 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Signs a message using a private key and a message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">private_key</td><td>the private key as a buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>the message as a pointer to a buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg_len</td><td>the lenght of the message that will be signed. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">signature</td><td>a pointer to the buffer to receive the signature.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>Precondition <a class="el" href="classdigital__signature.html#ac5dd4744f5503e7dffd172b4d4e2c1a1">signature_size()</a> == signature in bytes. </dd></dl>
 
-<p>Implemented in <a class="el" href="classsecp256k1__cryptopp.html#a030d62f0c7d51900ba5042d62762454c">secp256k1_cryptopp</a>, and <a class="el" href="classed25519__orlp.html#a12093b6367fa8d8b1e07cdd03e37f86e">ed25519_orlp</a>.</p>
+<p>Implemented in <a class="el" href="classed25519__orlp.html#a12093b6367fa8d8b1e07cdd03e37f86e">ed25519_orlp</a>, and <a class="el" href="classsecp256k1__cryptopp.html#a030d62f0c7d51900ba5042d62762454c">secp256k1_cryptopp</a>.</p>
 
 </div>
 </div>
@@ -482,8 +528,20 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Signs a deterministic message using a private key, random k and message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">private_key</td><td>the private key as a buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>the message as a pointer to a buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg_len</td><td>the lenght of the message that will be signed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">k</td><td>the random k used the sign the message </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">signature</td><td>a pointer to the buffer to recive the signature</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>Precondition <a class="el" href="classdigital__signature.html#ac5dd4744f5503e7dffd172b4d4e2c1a1">signature_size()</a> == signature in bytes. </dd></dl>
 
-<p>Implemented in <a class="el" href="classsecp256k1__cryptopp.html#af4a661ab3c96d18cfbc868e103520b8d">secp256k1_cryptopp</a>, and <a class="el" href="classed25519__orlp.html#af3e1985b8a1aac55ca9bf0d634217b9e">ed25519_orlp</a>.</p>
+<p>Implemented in <a class="el" href="classed25519__orlp.html#af3e1985b8a1aac55ca9bf0d634217b9e">ed25519_orlp</a>, and <a class="el" href="classsecp256k1__cryptopp.html#af4a661ab3c96d18cfbc868e103520b8d">secp256k1_cryptopp</a>.</p>
 
 </div>
 </div>
@@ -509,8 +567,9 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The size of the signature in bytes </p>
 
-<p>Implemented in <a class="el" href="classsecp256k1__cryptopp.html#ad35babfdeeb8c5b5a7626d0f91ca7151">secp256k1_cryptopp</a>, and <a class="el" href="classed25519__orlp.html#a2bda5cf45acc8f785c83b2ce99a2c0ec">ed25519_orlp</a>.</p>
+<p>Implemented in <a class="el" href="classed25519__orlp.html#a2bda5cf45acc8f785c83b2ce99a2c0ec">ed25519_orlp</a>, and <a class="el" href="classsecp256k1__cryptopp.html#ad35babfdeeb8c5b5a7626d0f91ca7151">secp256k1_cryptopp</a>.</p>
 
 </div>
 </div>
@@ -559,8 +618,18 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Verifies that a message was signed by the privated key coresponding to the given public key.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">public_key</td><td>the public key as a buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>the message as a pointer to a buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg_len</td><td>the lenght of the message </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">signature</td><td>a pointer to the buffer to recive the signature </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implemented in <a class="el" href="classsecp256k1__cryptopp.html#a1f6c0fa3fe5c9c894ebd65d113cbf59f">secp256k1_cryptopp</a>, and <a class="el" href="classed25519__orlp.html#a06bb71085ec9579bfdd6e9e055c814ad">ed25519_orlp</a>.</p>
+<p>Implemented in <a class="el" href="classed25519__orlp.html#a06bb71085ec9579bfdd6e9e055c814ad">ed25519_orlp</a>, and <a class="el" href="classsecp256k1__cryptopp.html#a1f6c0fa3fe5c9c894ebd65d113cbf59f">secp256k1_cryptopp</a>.</p>
 
 </div>
 </div>

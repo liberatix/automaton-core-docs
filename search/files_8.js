@@ -2,10 +2,6 @@ var searchData=
 [
   ['schema_2ecc',['schema.cc',['../schema_8cc.html',1,'']]],
   ['schema_2eh',['schema.h',['../schema_8h.html',1,'']]],
-  ['scriptable_2ecc',['scriptable.cc',['../scriptable_8cc.html',1,'']]],
-  ['scriptable_2eh',['scriptable.h',['../scriptable_8h.html',1,'']]],
-  ['scriptable_5fengine_2ecc',['scriptable_engine.cc',['../scriptable__engine_8cc.html',1,'']]],
-  ['scriptable_5fengine_2eh',['scriptable_engine.h',['../scriptable__engine_8h.html',1,'']]],
   ['secp256k1_5fcryptopp_2ecc',['secp256k1_cryptopp.cc',['../secp256k1__cryptopp_8cc.html',1,'']]],
   ['secp256k1_5fcryptopp_2eh',['secp256k1_cryptopp.h',['../secp256k1__cryptopp_8h.html',1,'']]],
   ['secure_5frandom_2ecc',['secure_random.cc',['../secure__random_8cc.html',1,'']]],

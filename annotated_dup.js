@@ -15,8 +15,6 @@ var annotated_dup =
     [ "protobuf_schema_definition", "classprotobuf__schema__definition.html", "classprotobuf__schema__definition" ],
     [ "RIPEMD160_cryptopp", "class_r_i_p_e_m_d160__cryptopp.html", "class_r_i_p_e_m_d160__cryptopp" ],
     [ "schema", "classschema.html", "classschema" ],
-    [ "scriptable", "classscriptable.html", "classscriptable" ],
-    [ "scriptable_engine", "classscriptable__engine.html", null ],
     [ "secp256k1_cryptopp", "classsecp256k1__cryptopp.html", "classsecp256k1__cryptopp" ],
     [ "secure_random", "classsecure__random.html", "classsecure__random" ],
     [ "secure_random_cryptopp", "classsecure__random__cryptopp.html", "classsecure__random__cryptopp" ],
